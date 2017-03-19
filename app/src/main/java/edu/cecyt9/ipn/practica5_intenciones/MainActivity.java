@@ -15,21 +15,22 @@ public class MainActivity extends ActionBarActivity {
    public void abrirPaginaWeb(View paginaWeb)
    {
        Intent intent = new Intent(Intent.ACTION_VIEW,
-                                  Uri.parse("http://coatl.cecyt9.ipn.mx/eoropeza/home.html"));
+                                  Uri.parse("https://www.facebook.com/PasteleriaReposteriaVangely/"));
        startActivity(intent);
    }
 
     public void llamadaTelefono(View llamada)
     {
         Intent intent = new Intent(Intent.ACTION_CALL,
-                Uri.parse("tel:57296000"));
+                Uri.parse("tel:5517976777"));
         startActivity(intent);
     }
 
     public void googleMaps(View maps)
     {
         Intent intent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("geo:19.453659, -99.175298"));
+                //Uri.parse("geo:19.4833442, -99.08781120000003"));
+                Uri.parse("geo:0,0?q=Pasteleria y Reposteria Vangely"));
         startActivity(intent);
     }
 
@@ -43,9 +44,9 @@ public class MainActivity extends ActionBarActivity {
     {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Asunto: Prueba");
-        intent.putExtra(Intent.EXTRA_TEXT, "Contenido del correo: Prueba");
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "eoropezag@ipn.mx"} );
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Asunto: Nuevo pedido falso");
+        intent.putExtra(Intent.EXTRA_TEXT, "Contenido del correo: Un rico pastel");
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "miriam_yg@live.com.mx"} );
         startActivity(intent);
     }
 
